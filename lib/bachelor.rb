@@ -13,6 +13,7 @@ end
 
 def get_contestant_name(data, occupation)
   # code here
+  occupation_array = []
   data.each do |season, info|
     if info["occupation"] == occupation 
       
