@@ -2,16 +2,12 @@ def get_first_name_of_season_winner(data, season_number)
   # code here
   winner_array = []
   winner_string = ""
-  data.each do |season, info|
-    if season == season_number 
-      info.each do |info_hash|
-        if info_hash.has_key?("Winner")
-          winner_string = info_hash[:name]
-          winner_array = winner_string.split
-        end
-      end
+  data[season_number].each do |info|
+    if info[:winner] == "Winner"
+      winner_string = info[:name]
     end
   end
+  winner_array = winner_string.split
   winner_array[0]
 end
 
