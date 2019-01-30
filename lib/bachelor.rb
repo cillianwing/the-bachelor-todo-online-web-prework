@@ -19,6 +19,7 @@ def get_contestant_name(data, occupation)
       if contestant_info["occupation"] == occupation 
         occupation_name_array << info["name"]
       end
+    end
   end
   occupation_name_array
 end
