@@ -4,8 +4,8 @@ def get_first_name_of_season_winner(data, season_number)
   winner_string = ""
   data.each do |season, info|
     if season == season_number 
-      if info["status"] == "Winner"
-        winner_string = info["name"]
+      if info[:status] == "Winner"
+        winner_string = info[:name]
       end
     end
   end
