@@ -7,11 +7,11 @@ def get_first_name_of_season_winner(data, season_number)
       info.each do |info_hash|
         if info_hash.has_key?("Winner")
           winner_string = info_hash[:name]
+          winner_array = winner_string.split
         end
       end
     end
   end
-  winner_array = winner_string.split
   winner_array[0]
 end
 
